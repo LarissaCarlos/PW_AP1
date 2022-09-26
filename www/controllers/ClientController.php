@@ -36,4 +36,33 @@ class ClientController{
         require_once('views/templates/footer.php');
         
     }
+    public function listClients(){
+        require_once('models/ClientModel.php');
+        $ClientModel = new ClientModel();
+        $result = $ClientModel -> listClients();
+
+        $arrayClients = array();
+
+        while($client = $result -> fetch_assoc()){
+            array_push($arrayClients, $client);
+        }
+
+        require_once('views/templates/header.php');
+        require_once('views/client/listClients.php');
+        require_once('views/templates/footer.php');
+    }
+
+    public function detailsClient($idClient){
+        require_once('models/ClientModel.php');
+        $ClientModel = new ClientModel();
+        $result = $ClientModel -> detailsClient($idClient);
+
+
+        require_once('views/templates/header.php');
+        echo "detalhes do cliente $idClient";
+        require_once('views/templates/footer.php');
+    }
+    
+
+
 }

@@ -5,7 +5,7 @@
 
     <footer class="p-3 bg-dark text-white text-center">
         <h2>Rodapé</h2>
-        <a href= "../index.php">Site</a>
+        <a class="link" href="admin/index.php">Area Administrativa</a>
     </footer> 
 </body>
 

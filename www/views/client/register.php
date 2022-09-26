@@ -18,7 +18,7 @@
 
     <div class="form-group">
         <div for="radio">
-            <label><input type="radio" name="gender" value="female" checked> Femenino </label>
+            <label><input type="radio" name="gender" value="female" checked> Feminino </label>
         </div>
         <div class="radio">
             <label><input type="radio" name="gender" value="male" checked> Masculino </label>

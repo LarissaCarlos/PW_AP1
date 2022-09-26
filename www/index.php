@@ -1,4 +1,7 @@
 <?php
+ ini_set('display_errors', 1);
+ ini_set('display_startup_errors', 1);
+ error_reporting(E_ALL);
 
     if(!isset($_GET['controller'])){
         require_once('controllers/SiteController.php');
@@ -26,22 +29,27 @@
                             $SiteController -> contact();
                         break;
                     }
-
-                    }
+                 }
             break;
 
             case 'client':
                 require_once('controllers/ClientController.php');
-                $client = new ClientController();
+                $ClientController = new ClientController();
                 if(!isset($_GET['action'])){
-                        $client -> index();
+                    $client -> index();
                 }else{
                     switch ($_REQUEST['action']) {
                         case 'register':
-                            $client -> register();
+                            $ClientController -> register();
                         break;
                         case 'registerView':
-                            $client -> registerView();
+                            $ClientController -> registerView();
+                        break;
+                        case 'listClients';
+                            $ClientController -> listClients();
+                        break;
+                        case 'detailsClient':
+                            $ClientController -> detailsClient();
                         break;
 
                     }

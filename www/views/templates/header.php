@@ -31,11 +31,12 @@
         <div class="row">
             <nav class="col-md-3 p-4">
                 <h2> Menu </h2>
+                <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a  id="home" class="nav-link" href="?controller=site&action=home">Home</a>
+                        <a  id="btnHome" class="nav-link" href="?controller=site&action=home">Home</a>
                     </li>
                     <li class="nav-item">
-                         <a  id="about" class="nav-link" href="?controller=site&action=about">Sobre</a>
+                         <a  id="btnAbout" class="nav-link" href="?controller=site&action=about">Sobre</a>
                     </li>
                     <li class="nav-item">
                          <a id="product" class="nav-link" href="?controller=site&action=products">Produtos e Serviços</a>
@@ -43,12 +44,15 @@
                     <li class="nav-item">
                         <a id="contact" class="nav-link" href="?controller=site&action=contact">Contato</a>
                     </li>
-                  </ul>
 
                   <h4>Clientes</h4>
                     <li class="nav-item">
-                        <a   class="nav-link" href="?controller=client&action=register">Cadastro</a>
+                        <a  id="" class="nav-link" href="?controller=client&action=register">Cadastro</a>
                     </li>
+                    <li class="nav-item">
+                        <a  id="" class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
+                    </li>
+
                 </ul>  
             </nav>
     
