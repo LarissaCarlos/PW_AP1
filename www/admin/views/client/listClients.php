@@ -28,9 +28,7 @@
                 <?=$client["address"]?>
             </td>
             <td>
-                <a href="?controller=client&action=detailsClient$id=<?=$client['idClient']?>">
-                    Detalhes
-                </a>
+             <a href="?controller=client&action=detailsClient&id=<?= $client['idClient'] ?>">Detalhes</a>
             </td>
         <tr>
     <?php

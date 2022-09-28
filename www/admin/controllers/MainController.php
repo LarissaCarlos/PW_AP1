@@ -25,6 +25,7 @@ class MainController
         session_destroy();
         header('Location:?controller=main&action=login');
     }
+    
     public function home()
     {
         require_once("views/templates/header.php");

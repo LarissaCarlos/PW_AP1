@@ -28,3 +28,4 @@ class ClientModel{
         return $connection -> query($sql);
     }
 }
+?>

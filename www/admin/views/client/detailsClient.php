@@ -3,23 +3,23 @@
     <tr>
     <th>Código do cliente</th>
         <td>
-            <?=arrayClient['idClient']?>
+            <?=$arrayClients['idClient']?>
         </td>
         <th>Nome</th>
         <td>
-            <?=arrayClient['name']?>
+            <?=$arrayClients['name']?>
         </td>
         <th>Email</th>
         <td>
-            <?=arrayClient['email']?>
+            <?=$arrayClients['email']?>
         </td>
         <th>Telefone</th>
         <td>
-            <?=arrayClient['phone']?>
+            <?=$arrayClients['phone']?>
         </td>
         <th>Endereço</th>
         <td>
-            <?=arrayClient['address']?>
+            <?=$arrayClients['address']?>
         </td>
         
     </tr>

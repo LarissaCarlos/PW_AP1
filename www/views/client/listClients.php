@@ -1,39 +1,36 @@
 <h1>Lista de Clientes</h1>
 <table class="table table-striped">
+
     <tr>
-        <th>ID do Cliente</th>
+        <th>ID Cliente</th>
         <th>Nome</th>
-        <th>Telefone</th>
         <th>Email</th>
+        <th>Telefone</th>
         <th>Endereço</th>
-        <th>Detalhes</th>
     </tr>
+
     <?php
-    foreach($arrayClients as $client){
+    foreach ($arrayClients as $client) {
     ?>
         <tr>
             <td>
-                <?=$client["idClient"]?>
+                <?= $client['idClient'] ?>
             </td>
             <td>
-                <?=$client["name"]?>
+                <?= $client['name'] ?>
             </td>
             <td>
-                <?=$client["phone"]?>
+                <?= $client['email'] ?>
             </td>
             <td>
-                <?=$client["email"]?>
+                <?= $client['phone'] ?>
             </td>
             <td>
-                <?=$client["address"]?>
+                <?= $client['address'] ?>
             </td>
-            <td>
-                <a href="?controller=client&action=detailsClient$id=<?=$client['idClient']?>">
-                    Detalhes
-                </a>
-            </td>
-        <tr>
+        </tr>
     <?php
     }
     ?>
+
 </table>
