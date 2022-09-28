@@ -18,6 +18,5 @@ class ConnectClass{
 
     public function getConn(){
         return $this -> conn;
-    }
-    
+    }  
 }

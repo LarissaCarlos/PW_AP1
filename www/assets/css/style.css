@@ -23,3 +23,7 @@ a:hover{
 .barras{
     background-color: rgb(179, 122, 209)!important;
 }
+
+h1{
+    font-size: 100px;
+}

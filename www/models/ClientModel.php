@@ -3,12 +3,12 @@ class ClientModel{
 
     public function listClients(){
         require_once('db/ConnectClass.php');
-        $connectClass = new ConnectClass();
-        $connectClass -> openConnect();
-        $connection = $connectClass -> getConn();
+        $ConnectClass = new ConnectClass();
+        $ConnectClass -> openConnect();
+        $Connection = $ConnectClass -> getConn();
 
-        $sql = 'SELECT * from clients';
-        return $connection -> query($sql);
+        $sql = "SELECT * from clients";
+        return $Connection -> query($sql);
     }
 
 }

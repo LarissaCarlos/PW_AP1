@@ -35,8 +35,10 @@
                     </li>
                 </ul>
                 <h4>Clientes</h4>
+                <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
                     </li>
+                </ul>
             </nav>
             <section class="p-3 col-md-9">

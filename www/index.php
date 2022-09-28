@@ -48,10 +48,6 @@
                         case 'listClients';
                             $ClientController -> listClients();
                         break;
-                        case 'detailsClient':
-                            $ClientController -> detailsClient();
-                        break;
-
                     }
                 }
             break;

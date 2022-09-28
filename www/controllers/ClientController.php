@@ -8,12 +8,12 @@ class ClientController{
 
     public function register(){
         require_once('views/templates/header.php');
-       require_once('views/client/register.php');
+        require_once('views/client/register.php');
         require_once('views/templates/footer.php');
-        
     }
 
     public function registerView(){
+        
         if(isset($_POST['accept'])){
             $accept = true;
             $acceptView = "Termo aceito.";
@@ -36,6 +36,7 @@ class ClientController{
         require_once('views/templates/footer.php');
         
     }
+    
     public function listClients(){
         require_once('models/ClientModel.php');
         $ClientModel = new ClientModel();
@@ -51,18 +52,5 @@ class ClientController{
         require_once('views/client/listClients.php');
         require_once('views/templates/footer.php');
     }
-
-    public function detailsClient($idClient){
-        require_once('models/ClientModel.php');
-        $ClientModel = new ClientModel();
-        $result = $ClientModel -> detailsClient($idClient);
-
-
-        require_once('views/templates/header.php');
-        echo "detalhes do cliente $idClient";
-        require_once('views/templates/footer.php');
-    }
-    
-
-
 }
+?>

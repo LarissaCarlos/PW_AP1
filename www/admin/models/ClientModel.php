@@ -8,6 +8,7 @@ class ClientModel{
         $connection = $connectClass -> getConn();
 
         $sql = 'SELECT * from clients';
+
         return $connection -> query($sql);
     }
 
@@ -18,12 +19,12 @@ class ClientModel{
         $connection = $connectClass -> getConn();
 
         $sql = "
-        SELECT * FROM clients
-        WHERE
+        SELECT * from clients
+            WHERE
             idClient = $idClient
-        ";
+        "
+        ;
+
         return $connection -> query($sql);
     }
-
-   
 }

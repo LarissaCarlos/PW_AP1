@@ -1,15 +1,17 @@
 <?php
 
-class ClientController{
+class ClientController
+{
 
-    public function listClients(){
+    public function listClients()
+    {
         require_once('models/ClientModel.php');
-        $ClientModel = new ClientModel();
-        $result = $ClientModel -> listClients();
+        $clientModel = new ClientModel();
+        $result = $clientModel->listClients();
 
         $arrayClients = array();
 
-        while($client = $result -> fetch_assoc()){
+        while ($client = $result->fetch_assoc()) {
             array_push($arrayClients, $client);
         }
 
@@ -18,17 +20,16 @@ class ClientController{
         require_once('views/templates/footer.php');
     }
 
-    public function detailsClient($idClient){
+    public function detailsClient($idClient)
+    {
         require_once('models/ClientModel.php');
-        $ClientModel = new ClientModel();
-        $result = $ClientModel -> detailsClient($idClient);
-        
-        if($arrayClient = $result -> fetch_assoc()){
+        $clientModel = new ClientModel();
+        $result = $clientModel->detailsClient($idClient);
 
+        if ($arrayClients = $result->fetch_assoc()) {
             require_once('views/templates/header.php');
-            require_once('views/cliente/detailsClient.php');
+            require_once('views/client/detailsClient.php');
             require_once('views/templates/footer.php');
-        }      
+        }
     }
-
 }

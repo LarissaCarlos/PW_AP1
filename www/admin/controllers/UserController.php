@@ -1,26 +1,30 @@
-<?php 
+<?php
+class UserController
+{
+  public function validateLogin()
+  {
+    $userName = $_POST['userName'];
+    $password = $_POST['password'];
+    require_once('models/UserModel.php');
+    $UserModel = new UserModel();
 
-class UserController{
-    
-    public function validateLogin(){
-        
-        $userName = $_POST['userName'];
-        $password = $_POST['password'];
+    $result = $UserModel->consultUser($userName);
 
-        require_once('models/UserModel.php');
-        $UserModel = new UserModel();
-
-        $result = $UserModel -> consultUser($userName);
-
-        if($line =  $result -> fetch_assoc()){
-            if($password == $line['password']){
-                $_SESSION['user'] = $line;
-                header('Location: index.php');
-            }else{
-                echo 'senha inválida';
-            }
-        }else{
-            echo 'usuário não existente';
-        }
+    if ($line = $result->fetch_assoc()) {
+      if ($password == $line['password']) {
+        $_SESSION['user'] = $line;
+        header('Location: index.php');
+      } else {
+        echo 'Senha inválida';
+      }
+    } else {
+      echo 'Usuário não existe';
     }
+  }
 }
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Sec
