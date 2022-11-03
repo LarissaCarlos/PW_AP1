@@ -39,6 +39,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?controller=client&action=listClients">Listar Clientes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?controller=client&action=insertClient">Inserir Cliente</a>
+                    </li>
                 </ul>
+
             </nav>
             <section class="p-3 col-md-9">

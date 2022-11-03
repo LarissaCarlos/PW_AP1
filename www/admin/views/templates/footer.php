@@ -1,12 +1,15 @@
+</section>
+</div>
+</div>
 
-            </section>
-        </div>
-    </div>
 
-    <footer class="p-3 text-center">
-        <h2>Rodapé</h2>
-        <a class="link" href="../index.php">Site</a>
-    </footer> 
+<footer class="p-3 text-center bg-dark">
+  <p class="text-white text-center p-2 m-0">
+    Copyright©
+  </p>
+  <a href="../index.php">Área pública</a>
+</footer>
+
 </body>
 
 </html>

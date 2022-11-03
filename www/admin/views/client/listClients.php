@@ -6,32 +6,53 @@
         <th>Telefone</th>
         <th>Email</th>
         <th>Endereço</th>
-        <th>Detalhes</th>
-    </tr>
+        <th>Foto</th>
+        <th colspan = "2">Açōes</th>
+    </tr>   
+
     <?php
-    foreach($arrayClients as $client){
+        foreach($arrayClients as $client){
     ?>
         <tr>
             <td>
-                <?=$client["idClient"]?>
+                <?=$client['idClient']?>
             </td>
             <td>
-                <?=$client["name"]?>
+                <?=$client['name']?>
             </td>
             <td>
-                <?=$client["phone"]?>
+                <?=$client['email']?>
             </td>
             <td>
-                <?=$client["email"]?>
+                <?=$client['phone']?>
             </td>
             <td>
-                <?=$client["address"]?>
+                <?=$client['address']?>
             </td>
             <td>
-             <a href="?controller=client&action=detailsClient&id=<?= $client['idClient'] ?>">Detalhes</a>
+                <?php
+                if (is_file("assets/img/client/{$client['idClient']}.jpg")){
+                    echo "<img class='img-fluid' src='assets/img/client/{$client['idClient']}.jpg'";
+                }else{
+                    echo'sem imagem';
+                }
+                ?>
             </td>
-        <tr>
+            <td>
+                <a href="?controller=client&action=detailsClient&id=<?=$client['idClient']?>"class="btn btn-info">Detalhes</a>
+
+            </td>
+            <td>
+                <a href="?controller=client&action=updateClient&id=<?=$client['idClient']?>"class="btn btn-warning">Alterar</a>
+
+            </td>
+            <td>
+                <a href="?controller=client&action=deleteClient&id=<?= $client['idClient']?>" class="btn btn-danger">Deletar</a>
+            </td>
+
+        </tr>
     <?php
     }
     ?>
+
 </table>
